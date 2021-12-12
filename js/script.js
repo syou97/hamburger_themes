@@ -1,0 +1,20 @@
+jQuery('.c-btn--header-menu').on('click',function(){
+  jQuery('.l-sidebar').addClass('open');
+  jQuery('.l-sidebar__drawer-bg').fadeToggle();
+  jQuery('html').css('overflow','hidden');
+    }
+  );
+  jQuery('.c-btn--menu-close').on('click',function(){
+    jQuery('.l-sidebar').removeClass('open');
+    jQuery('.l-sidebar__drawer-bg').fadeToggle();
+    jQuery('html').css('overflow','');
+  }
+);
+
+jQuery('.l-sidebar__drawer-bg').on('click',function(){
+  jQuery(this).fadeToggle();
+  jQuery('.c-button--header-menu').removeClass('open');
+  jQuery('.l-sidebar').removeClass('open');
+  jQuery('html').css('overflow','');   
+    }
+  );

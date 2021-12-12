@@ -1,0 +1,24 @@
+@use "../foundation/mixin";
+
+.l-footer{
+    background: #9D8670;
+    background-image: url(../img/footerbg.png);
+    padding: 40px 20px 30px;
+    text-align: center;
+    color: #FFF;
+    &__nav{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+        li:not(:last-of-type){
+            padding-right: .5em;
+            &::after{
+                content: "|";
+                margin-left: .5em;
+            }
+        }
+    }
+    small{
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,17 @@
+@use "../../foundation/mixin";
+
+.c-wrap__404{
+    text-align: center;
+    margin-top: 40px;
+    h2{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+    &__img{
+        margin-bottom: 2em;
+    }
+    .error_url{
+        margin: 1em 0;
+    }
+}

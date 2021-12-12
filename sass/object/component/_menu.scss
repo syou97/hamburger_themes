@@ -1,0 +1,15 @@
+.c-menu{
+    font-weight: bold;
+    margin-left: 46px;
+    font-size: 2.4rem;
+    &__item{
+        font-weight: normal;
+        font-size: 2.0rem;
+        margin-left: 20px;
+        padding-top: 40px;
+        padding-bottom: 34px;
+        li{
+            margin-bottom: 22px;
+        }
+    }
+}

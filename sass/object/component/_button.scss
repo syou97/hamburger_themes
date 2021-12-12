@@ -1,0 +1,71 @@
+@use "../../foundation/mixin";
+
+.c-btn--header-menu{
+    font-size: 2.0rem;
+    display: block;
+    margin-left: auto;
+    font-weight: bold;
+    color:#707070;
+    @include mixin.mq-up('pc') {
+        display: none;
+    }
+}
+
+.c-btn--menu-close{
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 12px;
+    right: 24px;
+    display: block;
+    margin-left: auto;
+    @include mixin.mq-up('pc') {
+        display: none;
+    }
+
+    &::before,&::after{
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        display: block;
+        background: #707070;
+        width: 40px;
+        height: 5px;
+        transform: rotate(-45deg);
+        z-index: 10;
+    }
+    &::after{
+        transform: rotate(45deg);
+    }
+}
+
+.c-btn--contents__card{
+    background: #fff;
+    color: #707070;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 15px 20px;
+    width: 50%;
+    max-width: 163px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    @include mixin.mq-up('pc') {
+        width: 70%;
+        max-width: 292px;
+    }
+}
+
+.c-btn--brown--gradation{
+        width: 20.8%;
+        max-width: 136px;
+        height: 46px;
+        border-radius: 10px;
+        background: linear-gradient(#f2ede9 0%, #ded8d3 100%);
+        border: 1px solid #707070;
+        font-weight: bold;
+        color: #707070;
+        text-align: center;
+}

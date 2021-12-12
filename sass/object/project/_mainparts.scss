@@ -1,0 +1,214 @@
+@use "../../foundation/mixin";
+
+.p-main__tit{
+    background-image: url(../img/mainvisual-sp@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 100%;
+    height: 285px;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    @include mixin.mq-up('tab'){
+        padding-left: 85px;
+    }
+    h2{
+        color: #FFFFFF;
+        font-size: 3.6rem;
+        font-weight: bold;
+        position: relative;
+    }
+    @include mixin.mq-up('tab'){
+        background: url(../img/mainvisual-pc@2x.jpg);
+        background-size: cover;
+        background-position: center center;
+        margin-bottom: 40px;
+    }
+    @include mixin.mq-up('pc') {
+        height: 530px;
+        margin-bottom: 120px;
+    }
+
+
+    &__archive{
+        background-image: url(../img/page-title_arcive@2x.jpg);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        @include mixin.mq-up('pc'){
+            height: 239px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        span{
+            font-size: 1.6rem;
+            color: #fff;
+            position: relative;
+            font-weight: bold;
+            display: block;
+            margin-top: 7px;
+            @include mixin.mq-up('tab'){
+                display: inline-block;
+                margin-top: 0;
+                margin-left: 20px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &__single{
+        background-image: url(../img/single-header.jpg);
+        background-size: cover;
+        background-position: center center;
+        @include mixin.mq-up('tab') {
+            background-image: url(../img/single-header-pc.jpg);
+            margin-bottom: 40px;
+        }
+        @include mixin.mq-up('pc') {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__page{
+        background-image: url(../img/shop.jpg);
+        background-size: cover;
+        background-position: center center;
+        @include mixin.mq-up('tab') {
+            background-image: url(../img/shop-pc.jpg);  
+        }
+    }
+}
+
+.p-main__menu{
+    padding: 0 20px;
+    margin-bottom: 60px;
+    @include mixin.mq-up('tab') {
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-around;
+      }
+      &-list{
+            padding: 3%;
+            margin-bottom: 20px;
+            width: 100%;
+            @include mixin.mq-up('tab') {
+                width: 48%;
+            }
+            &.-takeout{
+                background: url(../img/takeout.jpg)no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            &.-eatin{
+                background: url(../img/eatin.jpg);
+                background-size: cover;
+                background-position: center center;
+            }
+            dl{
+                background: #FFFFFF;
+                opacity: .8;
+                padding: 3% 3% 9% 3%;
+                margin-bottom: 3%;
+                dt{
+                    font-size: 2.2rem;
+                    margin-bottom: 20px;
+                }
+               }
+            h2{
+               font-size: 4.4rem;
+               font-weight: bold;
+               color: #FFFFFF;
+               position: relative;
+               margin-bottom: 200px;
+               &::after{
+                   content: "";
+                   position: absolute;
+                   display: block;
+                   width: 35px;
+                   height: 3px;
+                   background: #FFFFFF;
+                   bottom: -18px;
+                   left: 0;
+               }
+            }
+}
+
+}
+.p-map{
+    position: relative;
+    width: 100%;
+    color: #FFF;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    padding-left: calc(20px + 3%);
+    padding-right: calc(20px + 3%);
+    @include mixin.mq-up('pc'){
+        padding-left: 0;
+        padding-right: 0;
+    }
+    dl{
+        font-size: 1.4rem;
+        line-height: 2;
+        @include mixin.mq-up('pc') {
+            width: 61.96%;
+            padding: 0 8%;
+        }
+    dt{
+        font-size: 3.0rem;
+        font-weight: bold;
+        position: relative;
+        margin-bottom: 40px;
+        &::after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 75px;
+            height: 3px;
+            background: #FFFFFF;
+            bottom: -18px;
+            left: 0; 
+        }
+    }
+    }
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+    }
+    &__layer{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background:rgba($color: #000000, $alpha: 0.3);
+        z-index: -2;
+    }
+    &__layer2{
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        top: 0;
+        left: 0;
+        background:rgba($color: #000000, $alpha: 0.3);
+        z-index: -1; 
+        @include mixin.mq-up('tab') {
+            height: 100%;
+        }
+        @include mixin.mq-up('pc'){
+            width: 61.96%;
+        }
+    }
+}

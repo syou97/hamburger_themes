@@ -1,0 +1,14 @@
+//参考サイトhttps://www.tam-tam.co.jp/tipsnote/html_css/post10708.html
+$sizes: tab, pc;  //冒頭に使うサイズを明記するとわかりやすい
+
+$breakpoint-up: ( 
+  'tab': 'screen and (min-width: 600px)',
+  'pc': 'screen and (min-width: 1025px)',
+) !default;
+
+//mixinを定義（初期値はmd）
+@mixin mq-up($breakpoint: tab) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}

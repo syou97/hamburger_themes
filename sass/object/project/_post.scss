@@ -1,0 +1,84 @@
+@use "../../foundation/mixin";
+
+.p-contents{
+    h2{
+        font-size: 2.8rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+        @include mixin.mq-up('tab'){
+            font-size: 3.6rem;
+        }
+    }
+    p{
+        line-height: 1.5;
+        margin-bottom: 34px;
+    }
+    h3{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    @include mixin.mq-up('tab'){
+        font-size: 2.8rem;
+        }
+    }
+    h4,h5,h6{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 30px;  
+    }
+    blockquote{
+        background: #F5F5F5;
+        line-height: 1.5;
+        padding: 30px 20px;
+        margin-bottom: 30px;
+        p{
+            margin-bottom: 30px;
+        }
+        cite{
+            a{
+                color: #4A6C9B;
+                text-decoration-line: underline;
+            }
+        }
+    }
+
+        }
+        ol{
+            margin-bottom: 20px;
+            list-style-position:inside;
+            li{
+                list-style-type: decimal;
+            }
+            ol{
+                padding-top: 20px;
+                margin-left: 1em;
+            }
+        }
+        ul{
+            margin-bottom: 20px;
+            margin-bottom: 20px;
+            ul{
+                padding-top: 20px;
+                margin-left: 1em;
+            }
+        }
+
+    pre{
+        background: #F5F5F5;
+        width: 100%;
+        margin-bottom: 20px;
+        @include mixin.mq-up('tab'){
+            margin-bottom: 60px;
+        }
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 40px;
+        td {
+            border: 1px solid #707070;
+            padding: 20px;
+        }
+    
+    }
